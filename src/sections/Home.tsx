@@ -52,7 +52,7 @@ function Home() {
           </div>
           <div className="w-full md:w-1/2 flex justify-center md:justify-end">
             <img
-              src="/public/wiam.jpg"
+              src="/wiam.jpg"
               alt="Profile"
               className="w-64 h-64 md:w-[28rem] md:h-[28rem] rounded-full object-cover border-8 border-white dark:border-neutral-800 shadow-2xl"
             />
