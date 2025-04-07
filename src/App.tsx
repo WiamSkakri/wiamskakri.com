@@ -5,11 +5,13 @@ import Experience from './sections/Experience';
 import Projects from './sections/Projects';
 import Blog from './sections/Blog';
 import Contact from './sections/Contact';
+import { LoadingScreen } from './components/LoadingScreen';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,16 +63,16 @@ function App() {
     { href: 'mailto:wxs428@case.edu', icon: MailIcon }
   ];
 
+  if (isLoading) {
+    return <LoadingScreen onComplete={() => setIsLoading(false)} />;
+  }
+
   return (
     <div className="min-h-screen bg-white dark:bg-black text-[#37352F] dark:text-gray-100 font-mono">
       <nav className="fixed top-0 left-0 right-0 bg-white/50 dark:bg-black/50 backdrop-blur-sm z-50">
         <div className="max-w-5xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <img 
-              src="/logo.png" 
-              alt="Logo" 
-              className="h-40 w-40 rounded-full object-cover my-auto"
-            />
+            <h1 className="text-2xl font-bold text-primary">NM</h1>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
