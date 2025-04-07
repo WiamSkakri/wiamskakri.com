@@ -72,7 +72,7 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 bg-white/50 dark:bg-black/50 backdrop-blur-sm z-50">
         <div className="max-w-5xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            
+            <h1 className="text-2xl font-bold text-primary">WS</h1>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
