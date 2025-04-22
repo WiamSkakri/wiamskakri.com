@@ -4,18 +4,26 @@ import { Code, ExternalLink } from 'lucide-react';
 function Projects() {
   const projects = [
     {
-      title: 'E-commerce Platform',
-      description: 'A modern e-commerce solution built with Next.js and Stripe.',
-      link: 'https://project1.com',
-      image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800',
-      technologies: ['Next.js', 'Stripe', 'Tailwind CSS', 'PostgreSQL']
+      title: 'WoundWatch',
+      description: 'AI-powered wound assessment tool with real-time image classification and segmentation using PyTorch and Streamlit',
+      link: 'https://github.com/WiamSkakri/WoundWatch.git',
+      image: '/WoundWatch.png',
+      technologies: ['Python', 'Grad-Cam', 'ResNet-18', 'U-Net Architecture']
     },
     {
-      title: 'Task Management App',
-      description: 'Real-time task management application using React and Firebase.',
-      link: 'https://project2.com',
-      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=800',
-      technologies: ['React', 'Firebase', 'Material-UI', 'TypeScript']
+      title: 'Mutual-Fund-Calculator',
+      description: 'Goldman Sachs project to develop a mutual fund performance calculator.',
+      link: 'https://github.com/WiamSkakri/Mutual-Fund-Calculator',
+      image: '/GoldmanSachs.png',
+      technologies: ['Java', 'PostgreSQL', 'Angular', 'Tailwind CSS']
+    },
+
+    {
+      title: 'Sustainify',
+      description: 'A gamified approach to sustainability that calculates a sustainability score based on transaction history..',
+      link: 'https://github.com/WiamSkakri/Sustainability_Score.git',
+      image: '/Sustainify.png',
+      technologies: ['React-Native', 'Expo', 'Gemini', 'Google-API']
     }
   ];
 
@@ -25,10 +33,16 @@ function Projects() {
         <Code className="text-gray-400" size={24} />
         <h1 className="text-3xl font-handwriting">Projects</h1>
       </div>
-      <div className="grid grid-cols-1 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div key={index} className="border border-[#E6E6E6] dark:border-neutral-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-            <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
+           <div className="w-full h-64 flex items-center justify-center overflow-hidden">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="max-w-full max-h-full object-contain"
+  />
+</div>
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-2xl font-handwriting">{project.title}</h3>

@@ -171,18 +171,12 @@ function App() {
           <section id="home" className="min-h-screen">
             <Home />
           </section>
-          <section id="experience" className="min-h-screen py-20">
-            <Experience />
-          </section>
+         
           <section id="projects" className="min-h-screen py-20">
             <Projects />
           </section>
-          <section id="blog" className="min-h-screen py-20">
-            <Blog />
-          </section>
-          <section id="contact" className="min-h-screen py-20">
-            <Contact />
-          </section>
+         
+         
         </div>
       </main>
     </div>
